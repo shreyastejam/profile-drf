@@ -1,4 +1,3 @@
-
 from registration.models import Registerextend
 from rest_framework import serializers
 from django.contrib.auth.models import User
@@ -12,7 +11,8 @@ class AuthSerializer(serializers.ModelSerializer):
 class RegisterSerializer(serializers.ModelSerializer):
     class Meta:
         model = Registerextend
-        fields = ('user','profile_photo','birth_date','age','gender','personal_description','personality_tags','prospective_university','sharing_preferences','course','city','flat_finder','admission','food_preferences','cooking_skills','source')
+        fields = ('user','profile_photo','birth_date','age','gender','personal_description','personality_tags', 'university_name', 'university_image', 'university_latitude', 'university_longitude','sharing_preferences','course','city','flat_finder','admission','food_preferences','cooking_skills','source')
+
 
 
 
